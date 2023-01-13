@@ -86,7 +86,7 @@ class QAError:
                 method="density_matrix", device=self.device, optimization_level=0).get(1, 0)
             probs.append(p)
         par, err = curve_fit(f, np.arange(kmax), probs, p0=[1, 0.9], bounds=(0, 1))
-        return par, np.diag(np.sqrt(err)), probs
+        return par, np.sqrt(np.diag(err)), probs
 
     def Fisher_I(mk, Nk, t, p, p0=1):
         n = 2 * mk + 1
