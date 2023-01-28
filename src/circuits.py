@@ -211,7 +211,7 @@ class EuropeanCallOptionFourier(EuropeanCallOptionBase):
             pcos is where $\\beta$ is 0.
             psin is where $\\beta$ is $\pi/2$
         '''
-        coefs = self.fourier_coeffs(len(pcos) + 1)
+        coefs = self.fourier_coeffs(len(pcos))
         cos_terms = p0 - 2 * pcos
         sin_term = p0 - 2 * psin
         return (coefs[0] @ cos_terms + coefs[1] @ sin_term + self.xu / 2 * p0) * self.disc
