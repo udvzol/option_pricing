@@ -1,4 +1,4 @@
-# Option pricing on quantum coputers
+# Option pricing on quantum computers
 
 Quantum Monte Carlo method can be used to achieve a quadratic speedup over the classical Monte Carlo algorithm. 
 
